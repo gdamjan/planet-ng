@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ planet_lang | default('en') }}">
+<head>
+    <title>{{ planet_config.name | default('Planet') }}</title>
+    <style>
+      #main { display: flex }
+      #sidebar {flex: 1}
+      #posts {flex: 4; margin: 0 2em;}
+      footer { margin: 2em 0 1em; text-align: center; }
+    </style>
+</head>
+<body>
+{% include 'header.j2' %}
+<div id="main">
+{% include "sidebar.j2" %}
+
+<div id="posts">
+{% set limit = planet_config.new_feed_items | default(10) | int %}
+{% for post in posts | take(limit) %}
+    {%- include "render_post.j2" %}
+{% endfor %}
+</div>
+</div>
+{% include 'footer.j2' %}
+</body>
+</html>
