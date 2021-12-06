@@ -1,0 +1,7 @@
+*.py[cod]
+__pycache__/
+/py-env
+MANIFEST
+db.sqlite
+config.ini
+index.html

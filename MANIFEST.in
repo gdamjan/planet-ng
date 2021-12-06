@@ -1,0 +1,2 @@
+recursive-include planet_reader/templates *
+recursive-include planet_reader/static *
