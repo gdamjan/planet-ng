@@ -7,8 +7,9 @@ the original planet-planet software that seems unmaintained. Reads the same
 ## Quick start
 
 ```
-PYTHONUSERBASE=$PWD/py-env pip install -r requirements.txt
-PYTHONUSERBASE=$PWD/py-env python -m planet_reader
+export PYTHONUSERBASE=$PWD/py-env
+pip install -r requirements.txt
+python -m planet_reader
 ```
 
 ## Options
